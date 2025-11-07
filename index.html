@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuckyBear | Играть сейчас</title>
+  <link rel="icon" href="https://luckybear.fun//_next/static/media/home_logo.a028b260.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #001a33, #000814);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    img {
+      width: 200px;
+      margin-bottom: 60px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .play-btn {
+      background: linear-gradient(90deg, #007bff, #0055cc);
+      color: white;
+      border: none;
+      padding: 18px 60px;
+      font-size: 1.4em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+    }
+
+    .play-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 123, 255, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Уведомление */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s ease;
+      z-index: 10;
+    }
+
+    .popup.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-content {
+      background: #001f3d;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(0, 123, 255, 0.5);
+      animation: fadeIn 0.5s ease;
+    }
+
+    .popup h2 {
+      font-size: 1.4em;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    .popup-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .popup button {
+      background: linear-gradient(90deg, #007bff, #0055cc);
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .popup button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #008cff, #004ecc);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://luckybear.fun//_next/static/media/home_logo.a028b260.png" alt="LuckyBear Logo">
+  <button class="play-btn" id="playButton">ИГРАТЬ</button>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>ДЛЯ ИГРЫ ВОЗМОЖНО НУЖЕН VPN</h2>
+      <div class="popup-buttons">
+        <button id="continueBtn">ПРОДОЛЖИТЬ</button>
+        <button id="vpnBtn">СКАЧАТЬ VPN</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 LuckyBear.fun</footer>
+
+  <script>
+    const playButton = document.getElementById('playButton');
+    const popup = document.getElementById('popup');
+    const continueBtn = document.getElementById('continueBtn');
+    const vpnBtn = document.getElementById('vpnBtn');
+
+    playButton.addEventListener('click', () => {
+      popup.classList.add('active');
+    });
+
+    continueBtn.addEventListener('click', () => {
+      // 👉 сюда вставь свою реферальную ссылку
+      window.location.href = "https://lb333.me/9Yzry4";
+    });
+
+    vpnBtn.addEventListener('click', () => {
+      // 👉 сюда вставь ссылку на пост в Telegram
+      window.location.href = "https://t.me/berloga360/42";
+    });
+  </script>
+
+</body>
+</html>
