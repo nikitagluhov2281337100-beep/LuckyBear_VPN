@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>LuckyBear | Играть сейчас</title>
   <link rel="icon" href="https://luckybear.fun//_next/static/media/home_logo.a028b260.png">
   <style>
@@ -11,6 +11,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -20,13 +21,16 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      text-align: center;
       overflow: hidden;
     }
 
     img {
-      width: 200px;
-      margin-bottom: 60px;
+      width: 55vw;
+      max-width: 220px;
+      min-width: 140px;
+      margin-bottom: 50px;
       animation: fadeIn 1.5s ease;
     }
 
@@ -34,17 +38,18 @@
       background: linear-gradient(90deg, #007bff, #0055cc);
       color: white;
       border: none;
-      padding: 18px 60px;
+      padding: 18px 70px;
       font-size: 1.4em;
       border-radius: 50px;
       cursor: pointer;
       transition: 0.3s;
       box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+      width: 80%;
+      max-width: 320px;
     }
 
-    .play-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 123, 255, 0.6);
+    .play-btn:active {
+      transform: scale(0.97);
     }
 
     @keyframes fadeIn {
@@ -59,7 +64,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.75);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,6 +72,7 @@
       opacity: 0;
       transition: 0.3s ease;
       z-index: 10;
+      padding: 20px;
     }
 
     .popup.active {
@@ -76,46 +82,57 @@
 
     .popup-content {
       background: #001f3d;
-      padding: 40px;
-      border-radius: 16px;
+      padding: 25px;
+      border-radius: 14px;
       text-align: center;
       box-shadow: 0 0 40px rgba(0, 123, 255, 0.5);
-      animation: fadeIn 0.5s ease;
+      width: 90%;
+      max-width: 360px;
+      animation: fadeIn 0.4s ease;
     }
 
     .popup h2 {
-      font-size: 1.4em;
-      margin-bottom: 25px;
+      font-size: 1.2em;
+      margin-bottom: 20px;
       color: #fff;
+      line-height: 1.4em;
     }
 
     .popup-buttons {
       display: flex;
-      justify-content: center;
-      gap: 20px;
+      flex-direction: column;
+      gap: 15px;
     }
 
     .popup button {
       background: linear-gradient(90deg, #007bff, #0055cc);
       border: none;
       color: white;
-      padding: 12px 30px;
-      border-radius: 8px;
+      padding: 14px 25px;
+      border-radius: 10px;
       font-size: 1em;
       cursor: pointer;
-      transition: 0.3s;
+      transition: 0.25s;
+      width: 100%;
     }
 
-    .popup button:hover {
-      transform: scale(1.05);
+    .popup button:active {
+      transform: scale(0.97);
       background: linear-gradient(90deg, #008cff, #004ecc);
     }
 
     footer {
       position: absolute;
-      bottom: 15px;
+      bottom: 10px;
       font-size: 0.8em;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (max-height: 600px) {
+      img { margin-bottom: 30px; }
+      .play-btn { padding: 14px 50px; font-size: 1.1em; }
     }
   </style>
 </head>
@@ -147,12 +164,12 @@
     });
 
     continueBtn.addEventListener('click', () => {
-      // 👉 сюда вставь свою реферальную ссылку
+      // 👉 вставь свою реферальную ссылку
       window.location.href = "https://lb333.me/9Yzry4";
     });
 
     vpnBtn.addEventListener('click', () => {
-      // 👉 сюда вставь ссылку на пост в Telegram
+      // 👉 вставь ссылку на пост с VPN
       window.location.href = "https://t.me/berloga360/42";
     });
   </script>
